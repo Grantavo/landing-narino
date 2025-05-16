@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nariño Mágico</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="/recursos/Nariño donde puedes soñar.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+
+    <header>
+      <div class="logo-container">
+        <img
+          src="/recursos/img-icono.jpg"
+          alt="Logo"
+        />
+        <h2>Nariño</h2>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Eventos</a>
+        <a href="#">Aventura</a>
+      </nav>
+      <button class="menu-btn" id="menu-toggle">Menú</button>
+    </header>
+
+    <section class="main-content">
+      <h1 class="main-title">Nariño Mágico</h1>
+      <p class="subtitle">Nariño: Donde la magia y la aventura convergen.</p>
+      <button class="call-btn">¡Sí!</button>
+    </section>
+
+    <!-- Botón flotante de WhatsApp con tooltip -->
+    <a
+      href="https://wa.me/573162813284?text=¡Hola!%20Estoy%20interesado%20en%20conocer%20más%20sobre%20Nariño%20Mágico."
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <span class="whatsapp-tooltip">Chatea con nosotros</span>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+        alt="WhatsApp"
+      />
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
