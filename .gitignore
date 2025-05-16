@@ -1,0 +1,21 @@
+# Node (por si usas npm en el futuro)
+node_modules/
+
+# Archivos de logs
+*.log
+npm-debug.log*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Otros
+dist/
+.env

@@ -1,15 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menu-toggle");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("main-nav");
 
-  menuBtn.addEventListener("click", () => {
-    alert("Aquí podrías abrir un menú lateral o desplegable 😉");
-  });
-
-  document.querySelector(".edit-btn").addEventListener("click", () => {
-    alert("Modo edición activado ✏️");
-  });
-
-  document.querySelector(".add-btn").addEventListener("click", () => {
-    alert("Elemento agregado con éxito ➕");
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
   });
 });

@@ -34,6 +34,7 @@ header {
   border-radius: 50px;
   margin: 20px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .logo-container {
@@ -72,41 +73,7 @@ header {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-}
-
-.main-content {
-  margin-top: 120px;
-  padding-left: 60px;
-  max-width: 700px;
-}
-
-.main-title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #FFB088;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 1.3rem;
-  font-weight: 400;
-}
-
-.call-btn {
-  margin-top: 40px;
-  border: 2px solid white;
-  border-radius: 50px;
-  padding: 15px 35px;
-  background-color: transparent;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.call-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 24px;
 }
 
 /* Botón flotante de WhatsApp con tooltip */
@@ -172,17 +139,66 @@ header {
   }
 }
 
-/* Responsive */
+.main-content {
+  margin-top: 120px;
+  padding-left: 60px;
+  max-width: 700px;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #FFB088;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.call-btn {
+  margin-top: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 15px 35px;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive menu */
 @media (max-width: 768px) {
-  header {
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+    padding: 15px 20px;
+    border-radius: 12px;
     flex-direction: column;
     align-items: flex-start;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
+  .nav-links a {
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: fadeSlide 0.3s ease-in-out;
   }
 
   .main-content {
@@ -192,5 +208,23 @@ header {
 
   .main-title {
     font-size: 2.5rem;
+  }
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ocultar el botón menú en pantallas grandes */
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
   }
 }
